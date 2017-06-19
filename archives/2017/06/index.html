@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   
-  <meta name="keywords" content="刘寒雨">
-  <meta name="description" content="刘寒雨的个人网站">
+  <meta name="keywords" content="网站关键字">
+  <meta name="description" content="网站简介">
   
   <title>刘寒雨的博客</title>
   
     <!-- stylesheets list from config.yml -->
     
-      <link rel="stylesheet" href="./css/materialize.min.css">
+      <link rel="stylesheet" href="/css/materialize.min.css">
     
-      <link rel="stylesheet" href="./css/main.min.css">
+      <link rel="stylesheet" href="/css/main.min.css">
     
   
   
@@ -34,12 +34,12 @@
     </style>
 </head>
 <body>
-<a href="#" data-activates="slide-out"  class="button-collapse"><div class="nav-btn"><i class="material-icons">list</i></div></a>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" data-home="https://rainmanliu.github.io/myblog"><span class="nav-btn"></span></a></div>
 <div id="menu-outer">
   <div id="menu-inner">
       <ul id="slide-out" class="side-nav" >
-    <div class="nav-header"  style="background-image: url(./images/header-bg.png);background-color:#26A69A">
-    <div class="header-box"><img src="./images/header.png" ondragstart="return false;"></div>
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
     <p>刘寒雨</p>
     <div class="nav-link">
         
@@ -70,7 +70,7 @@
     <!--Homepage-->
 
 <li class="nav-list">
-    <a href="/" target="_self">
+    <a href="https://rainmanliu.github.io/myblog/" target="_self">
         <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
     </a>
 </li>
@@ -85,7 +85,7 @@
 
 <ul class="dropdown-menu dropdown" >
     <li class="nav-dropdown-list">
-        <a class="archive-link" href="/archives/2017/06/">June 2017<span class="archive-count">1</span></a>
+        <a class="archive-link" href="https:/rainmanliu.github.io/myblog/archives/2017/06/">June 2017<span class="archive-count">1</span></a>
     </li>
 </ul>
 <!--categories-->
@@ -132,11 +132,11 @@
 
 <div id="recent-posts">
   
-      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-1.png"  >
-        <a class="recent-post-link" href="/2017/06/19/hello-world/">
+      <div class="recent-post-item lazy" style="background-color:#26A69A"  data-original="/images/random/vateral-4.png"  >
+        <a class="recent-post-link" href="https://rainmanliu.github.io/myblog/2017/06/19/hello-world/">
         <div class="post-hover">
           <!--title-->
-          <p class="post-title"><a href="/2017/06/19/hello-world/" >Hello World</a></p>
+          <p class="post-title"><a href="https://rainmanliu.github.io/myblog/2017/06/19/hello-world/" >Hello World</a></p>
 
           <!--date-->
           
@@ -168,7 +168,7 @@
               
             </p>
           </div>
-          <div class="post-more"><a href="/2017/06/19/hello-world/" >全文阅读</a></div>
+          <div class="post-more"><a href="https://rainmanliu.github.io/myblog/2017/06/19/hello-world/" >全文阅读</a></div>
         </div>
         </a>
       </div>
@@ -201,20 +201,30 @@
 
 <!-- scripts list from theme config.yml -->
 
-<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="/js/jquery-3.1.1.min.js"></script>
 
-<script src="./js/materialize.min.js"></script>
+<script src="/js/materialize.min.js"></script>
 
-<script src="./js/main.min.js"></script>
+<script src="/js/main.min.js"></script>
 
 
 <script>
-    lazy();
-    links();
     NProgress.start();
     NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
 </script>
-
 
 </body>
 </html>
