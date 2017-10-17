@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://rainmanliu.github.io/myblog/2017/06/20/zabbix的api使用/index.html">
 <meta property="og:site_name" content="刘寒雨的博客">
 <meta property="og:description" content="使用API说明使用Python操作zabbix的api，使用pyzabbix库对pyzabbix进行封装，针对设备或者模板的更加快捷方便的增删改查 安装pyzabbix1$ pip install pyzabbix 测试zabbix连接1234from pyzabbix import ZabbixAPI, ZabbixAPIExceptionzapi = ZabbixAPI(&quot;http://you">
-<meta property="og:updated_time" content="2017-06-21T05:35:27.000Z">
+<meta property="og:updated_time" content="2017-06-21T10:40:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zabbix的api使用">
 <meta name="twitter:description" content="使用API说明使用Python操作zabbix的api，使用pyzabbix库对pyzabbix进行封装，针对设备或者模板的更加快捷方便的增删改查 安装pyzabbix1$ pip install pyzabbix 测试zabbix连接1234from pyzabbix import ZabbixAPI, ZabbixAPIExceptionzapi = ZabbixAPI(&quot;http://you">
@@ -343,6 +343,8 @@
         <h3 id="使用API说明"><a href="#使用API说明" class="headerlink" title="使用API说明"></a>使用API说明</h3><p>使用Python操作zabbix的api，使用pyzabbix库<br>对pyzabbix进行封装，针对设备或者模板的更加快捷方便的增删改查</p>
 <h3 id="安装pyzabbix"><a href="#安装pyzabbix" class="headerlink" title="安装pyzabbix"></a>安装pyzabbix</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pip install pyzabbix</div></pre></td></tr></table></figure>
 <h3 id="测试zabbix连接"><a href="#测试zabbix连接" class="headerlink" title="测试zabbix连接"></a>测试zabbix连接</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> pyzabbix <span class="keyword">import</span> ZabbixAPI, ZabbixAPIException</div><div class="line"></div><div class="line">zapi = ZabbixAPI(<span class="string">"http://your_zabbix_web_ip/"</span>)</div><div class="line">zapi.login(<span class="string">"user"</span>, <span class="string">"passwd"</span>)</div></pre></td></tr></table></figure>
+<p>没有报错的话，那么证明连接成功</p>
+
       
     </div>
 
@@ -393,6 +395,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/myblog/2017/10/16/服务器安装centos7总结/" rel="prev" title="服务器安装centos7总结">
+                服务器安装centos7总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -464,7 +470,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/myblog/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -475,7 +481,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/myblog/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -486,7 +492,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/myblog/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
