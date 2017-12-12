@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="为什么要NTP服务在搭建某些后台计算服务的时候，需要统一服务器的时间，这时候需要用到时间统一 为什么要用docker搭建NTP服务器如果服务器没有NTP server服务的情况下，编译安装NTP服务会比较麻烦，有时候会缺少各种类库，会比较头痛，使用docker部署，很轻松 部署NTP服务12345678910111213141516171819202122232425# 获取ntpd镜像docke">
+<meta name="description" content="为什么要NTP服务在搭建某些后台计算程序的时候，需要服务器的时间参与计算，这时候需要用到时间的统一 为什么要用docker搭建NTP服务器如果服务器没有NTP server服务的情况下，编译安装NTP服务会比较麻烦，有时候会缺少各种类库，会比较头痛，使用docker部署，很轻松 部署NTP服务12345678910111213141516171819202122232425# 获取ntpd镜像do">
 <meta name="keywords" content="docker,NTP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建内网docker版NTP服务器">
 <meta property="og:url" content="http://rainmanliu.github.io/myblog/2017/12/12/搭建内网docker版NTP服务器/index.html">
 <meta property="og:site_name" content="刘寒雨的博客">
-<meta property="og:description" content="为什么要NTP服务在搭建某些后台计算服务的时候，需要统一服务器的时间，这时候需要用到时间统一 为什么要用docker搭建NTP服务器如果服务器没有NTP server服务的情况下，编译安装NTP服务会比较麻烦，有时候会缺少各种类库，会比较头痛，使用docker部署，很轻松 部署NTP服务12345678910111213141516171819202122232425# 获取ntpd镜像docke">
-<meta property="og:updated_time" content="2017-12-12T09:32:49.769Z">
+<meta property="og:description" content="为什么要NTP服务在搭建某些后台计算程序的时候，需要服务器的时间参与计算，这时候需要用到时间的统一 为什么要用docker搭建NTP服务器如果服务器没有NTP server服务的情况下，编译安装NTP服务会比较麻烦，有时候会缺少各种类库，会比较头痛，使用docker部署，很轻松 部署NTP服务12345678910111213141516171819202122232425# 获取ntpd镜像do">
+<meta property="og:updated_time" content="2017-12-12T09:36:01.628Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建内网docker版NTP服务器">
-<meta name="twitter:description" content="为什么要NTP服务在搭建某些后台计算服务的时候，需要统一服务器的时间，这时候需要用到时间统一 为什么要用docker搭建NTP服务器如果服务器没有NTP server服务的情况下，编译安装NTP服务会比较麻烦，有时候会缺少各种类库，会比较头痛，使用docker部署，很轻松 部署NTP服务12345678910111213141516171819202122232425# 获取ntpd镜像docke">
+<meta name="twitter:description" content="为什么要NTP服务在搭建某些后台计算程序的时候，需要服务器的时间参与计算，这时候需要用到时间的统一 为什么要用docker搭建NTP服务器如果服务器没有NTP server服务的情况下，编译安装NTP服务会比较麻烦，有时候会缺少各种类库，会比较头痛，使用docker部署，很轻松 部署NTP服务12345678910111213141516171819202122232425# 获取ntpd镜像do">
 
 
 
@@ -362,7 +362,7 @@
       
 
       
-        <h3 id="为什么要NTP服务"><a href="#为什么要NTP服务" class="headerlink" title="为什么要NTP服务"></a>为什么要NTP服务</h3><p>在搭建某些后台计算服务的时候，需要统一服务器的时间，这时候需要用到时间统一</p>
+        <h3 id="为什么要NTP服务"><a href="#为什么要NTP服务" class="headerlink" title="为什么要NTP服务"></a>为什么要NTP服务</h3><p>在搭建某些后台计算程序的时候，需要服务器的时间参与计算，这时候需要用到时间的统一</p>
 <h3 id="为什么要用docker搭建NTP服务器"><a href="#为什么要用docker搭建NTP服务器" class="headerlink" title="为什么要用docker搭建NTP服务器"></a>为什么要用docker搭建NTP服务器</h3><p>如果服务器没有NTP server服务的情况下，编译安装NTP服务会比较麻烦，有时候会缺少各种类库，会比较头痛，使用docker部署，很轻松</p>
 <h3 id="部署NTP服务"><a href="#部署NTP服务" class="headerlink" title="部署NTP服务"></a>部署NTP服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"># 获取ntpd镜像</div><div class="line">docker pull seznam/ntpd</div><div class="line"></div><div class="line"># 启动ntpd服务</div><div class="line">docker run -d --net=host --name ntpd seznam/ntpd</div><div class="line"></div><div class="line"># 进入容器内部，修改配置文件</div><div class="line">docker exec -it ntpd bash</div><div class="line">vi /etc/ntp.conf</div><div class="line"></div><div class="line"># 添加时间服务器地址，如果内网有时间服务器，填写改地址，如果没有，添加下面的地址，同步本地时间</div><div class="line">server 127.127.1.0</div><div class="line">fudge 127.127.1.0 stratum 8</div><div class="line">restrict default nomodify notrap nopeer noquery</div><div class="line">restrict 127.0.0.1</div><div class="line"></div><div class="line"># 重启容器</div><div class="line">docker restart ntpd</div><div class="line"></div><div class="line"># 同步客户机时间</div><div class="line">ntpdate x.x.x.x (等待时间服务器10分钟后，执行这里)</div><div class="line"></div><div class="line"># 设置定时任务</div><div class="line">crontab -e</div><div class="line">00 2 * * * ntpdate x.x.x.x (每天凌晨2点执行此命令)</div></pre></td></tr></table></figure>
       
