@@ -273,6 +273,140 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://rainmanliu.github.io/myblog/myblog/2018/03/20/docker进阶/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘寒雨">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myblog/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘寒雨的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/myblog/2018/03/20/docker进阶/" itemprop="url">docker进阶</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T17:47:16+08:00">
+                2018-03-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/myblog/categories/监控/" itemprop="url" rel="index">
+                    <span itemprop="name">监控</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>《Docker进阶与实战》笔记</p>
+<h2 id="Docker基础概念"><a href="#Docker基础概念" class="headerlink" title="Docker基础概念"></a>Docker基础概念</h2><h2 id="Docker容器原理"><a href="#Docker容器原理" class="headerlink" title="Docker容器原理"></a>Docker容器原理</h2><h2 id="Docker镜像"><a href="#Docker镜像" class="headerlink" title="Docker镜像"></a>Docker镜像</h2><h2 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h2><h2 id="Docker网络"><a href="#Docker网络" class="headerlink" title="Docker网络"></a>Docker网络</h2><h2 id="Docker卷管理"><a href="#Docker卷管理" class="headerlink" title="Docker卷管理"></a>Docker卷管理</h2><h2 id="Docker-API"><a href="#Docker-API" class="headerlink" title="Docker API"></a>Docker API</h2>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://rainmanliu.github.io/myblog/myblog/2018/03/11/Python基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -363,7 +497,9 @@
       
         
           
-            <h3 id="List问题"><a href="#List问题" class="headerlink" title="List问题"></a>List问题</h3><h1 id="反转list（三种方法）"><a href="#反转list（三种方法）" class="headerlink" title="反转list（三种方法）"></a>反转list（三种方法）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">list_a = [1,2,3,4,5,6,7,8,9]  </div><div class="line">reverse_list = list(reversed(list_a)) # 利用原生reversed</div><div class="line"></div><div class="line">reverse_list = sorted(list_a,cmp=None, key=None, reverse=True) # 利用sorted</div><div class="line"></div><div class="line">reverse_list = list_a[::-1] # 利用切片</div></pre></td></tr></table></figure>
+            <h3 id="List问题"><a href="#List问题" class="headerlink" title="List问题"></a>List问题</h3><h1 id="反转list（三种方法）"><a href="#反转list（三种方法）" class="headerlink" title="反转list（三种方法）"></a>反转list（三种方法）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">list_a = [1,2,3,4,5,6,7,8,9]  </div><div class="line">reverse_list = list(reversed(list_a)) # 利用原生reversed</div><div class="line"></div><div class="line"># 利用sorted（sorted方法仅适用于有序列表）</div><div class="line">reverse_list = sorted(list_a,cmp=None, key=None, reverse=True) </div><div class="line"></div><div class="line">reverse_list = list_a[::-1] # 利用切片</div></pre></td></tr></table></figure>
+<h1 id="切片list"><a href="#切片list" class="headerlink" title="切片list"></a>切片list</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">lst = [1,2,3,5,2,5,67,21]</div><div class="line"># 以三个为一组切片</div><div class="line">res_list = [lst[i:i+3] for i in range(0,len(lst),3)]</div><div class="line"></div><div class="line">res_list:[[1,2,3],[5,2,5],[67,21]]</div></pre></td></tr></table></figure>
+<h1 id="取list交集-并集-差集"><a href="#取list交集-并集-差集" class="headerlink" title="取list交集 并集 差集"></a>取list交集 并集 差集</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">a = [1,2,3]</div><div class="line">b = [2,3,4]</div><div class="line">intersection = [v for v in a if v in b] # 交集</div><div class="line">intersection = list(set(a).intersection(set(b))) # 交集</div><div class="line"></div><div class="line">union = list(set(a+b)) # 并集</div><div class="line">union = list(set(a).union(set(b))) # 并集</div><div class="line"></div><div class="line">different = [v for v in a if v not in b] # 从a数组查找与b数组不一样的数据</div><div class="line">different = list(set(a).difference(set(b)))</div></pre></td></tr></table></figure>
 <h3 id="标准库的使用"><a href="#标准库的使用" class="headerlink" title="标准库的使用"></a>标准库的使用</h3><h1 id="random"><a href="#random" class="headerlink" title="random"></a>random</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># 生成指定数字间浮点数</div><div class="line">random.uniform(10, 20) 闭区间</div><div class="line"></div><div class="line"># 生成指定数字键整数</div><div class="line">random.randint(10, 20) 闭区间</div><div class="line"></div><div class="line"># 随机生成指定区间内偶数</div><div class="line">random.randrange(0, 101, 2) randrange第三个参数为step个数</div><div class="line"></div><div class="line"># 随机选择字符</div><div class="line">random.choice(&apos;abcdefg&amp;#%^*f&apos;)</div><div class="line"></div><div class="line"># 随机选择指定个数字符</div><div class="line">random.sample(&apos;abcdefghij&apos;,3)</div><div class="line"></div><div class="line"># 洗牌（打乱排序）</div><div class="line">random.shuffle([1, 2, 3, 4, 5, 6])</div></pre></td></tr></table></figure>
 <h1 id="re"><a href="#re" class="headerlink" title="re"></a>re</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
           
@@ -1110,7 +1246,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/myblog/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
